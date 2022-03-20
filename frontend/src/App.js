@@ -1,6 +1,6 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
-import HomeScreen from './components/screens/HomeScreen'
+import HomeScreen from './screens/HomeScreen'
 import { Container } from 'react-bootstrap'
 function App() {
   return (
