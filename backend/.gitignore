@@ -2,6 +2,7 @@
 *.sqlite3
 .db
 
+static/images
 #folders
 static/media/profiles
 # Byte-compiled / optimized / DLL files
