@@ -1,6 +1,7 @@
 from cgi import print_arguments
 from tkinter import CASCADE
 from tkinter.tix import MAX
+from tokenize import blank_re
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -9,7 +10,7 @@ class Product(models.Model):
     #don't need to delete it
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=200, null=True, blank=True)
-    #image =
+    image = models.ImageField(null=True, blank=True)
     brand = models.CharField(max_length=200, null=True, blank=True)
     category = models.CharField(max_length=200, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
