@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Row, Col } from 'react-bootstrap'
+//componets
 import Product from '../components/Product'
+import Loader from '../components/Loader'
+
+
 import { useDispatch, useSelector } from 'react-redux'
 import { listProductsAction } from '../actions/productActions'
 function HomeScreen() {
@@ -17,7 +21,7 @@ function HomeScreen() {
 
       <h1>Latest Products</h1>
       {
-        loading? <h2>Loading...</h2> 
+        loading? <Loader/>
           : error ? <h3>{error}</h3>
             : 
             <Row>
