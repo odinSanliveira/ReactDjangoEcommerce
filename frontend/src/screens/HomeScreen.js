@@ -3,6 +3,7 @@ import { Row, Col } from 'react-bootstrap'
 //componets
 import Product from '../components/Product'
 import Loader from '../components/Loader'
+import Message from '../components/Message'
 
 
 import { useDispatch, useSelector } from 'react-redux'
@@ -22,7 +23,7 @@ function HomeScreen() {
       <h1>Latest Products</h1>
       {
         loading? <Loader/>
-          : error ? <h3>{error}</h3>
+          : error ? <Message variant='danger'>{error}</Message>
             : 
             <Row>
               {products.map(product => (
